@@ -8,7 +8,105 @@
     tools:context=".ui.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:id="@+id/welcomeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeHeader" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        android:foreground="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions" />
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="something"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/versusTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/computerMoveImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="#00695C"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toStartOf="@+id/versusTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/computerNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/computerMoveImg"
+        app:layout_constraintStart_toStartOf="@+id/computerMoveImg"
+        app:layout_constraintTop_toBottomOf="@+id/computerMoveImg" />
+
+    <TextView
+        android:id="@+id/versusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/versus"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toStartOf="@+id/computerMoveImg"
+        app:layout_constraintStart_toEndOf="@+id/playerMoveImg"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <ImageView
+        android:id="@+id/playerMoveImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/versusTv"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/playerNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/playerMoveImg"
+        app:layout_constraintStart_toStartOf="@+id/playerMoveImg"
+        app:layout_constraintTop_toBottomOf="@+id/playerMoveImg" />
+
     <TableRow
+        android:id="@+id/tableRow"
         style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,16 +116,16 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/rockBtn"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="120dp"
             android:layout_height="90dp"
             android:background="#009688"
             android:foreground="@drawable/rock" />
 
         <Button
-            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/paperBtn"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="120dp"
             android:layout_height="90dp"
             android:layout_marginStart="16dp"
@@ -35,8 +133,8 @@
             android:foreground="@drawable/paper" />
 
         <Button
-            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/scissorsBtn"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="120dp"
             android:layout_height="90dp"
             android:layout_marginStart="16dp"
