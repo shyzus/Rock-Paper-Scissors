@@ -3,4 +3,9 @@
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions: select rock, paper or scissors to play.</string>
     <string name="versus">V.S.</string>
+    <string name="computer">Computer</string>
+    <string name="you">You</string>
+    <string name="draw">Draw</string>
+    <string name="computerWins">Computer wins!</string>
+    <string name="youWin">You win!</string>
 </resources>
