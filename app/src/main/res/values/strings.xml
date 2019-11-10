@@ -8,4 +8,7 @@
     <string name="draw">Draw</string>
     <string name="computerWins">Computer wins!</string>
     <string name="youWin">You win!</string>
+    <string name="show_history">Show History</string>
+    <string name="delete_history">delete history</string>
+    <string name="statistics_header">Your all time statistics</string>
 </resources>

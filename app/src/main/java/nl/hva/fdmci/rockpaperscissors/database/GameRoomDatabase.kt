@@ -5,7 +5,7 @@ import androidx.room.*
 import nl.hva.fdmci.rockpaperscissors.model.Game
 
 @Database(entities = [Game::class], version = 1, exportSchema = false)
-@TypeConverters(Converter::class)
+@TypeConverters(DateConverter::class)
 abstract class GameRoomDatabase : RoomDatabase() {
 
     abstract fun gameDAO(): GameDAO

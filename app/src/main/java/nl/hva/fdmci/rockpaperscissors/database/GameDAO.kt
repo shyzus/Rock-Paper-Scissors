@@ -20,4 +20,7 @@ interface GameDAO {
 
     @Query("DELETE FROM game_table")
     suspend fun deleteAllGames()
+
+    @Query("SELECT COUNT(*) FROM game_table WHERE game_table.winner = :winner")
+    suspend fun getGamesByWinner(winner: String): Int
 }

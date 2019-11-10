@@ -31,7 +31,7 @@
     <View
         android:id="@+id/divider"
         android:layout_width="0dp"
-        android:layout_height="16dp"
+        android:layout_height="12dp"
         android:layout_marginTop="16dp"
         android:background="?android:attr/listDivider"
         android:foreground="@color/colorPrimary"
@@ -39,6 +39,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instructions" />
 
+    <TextView
+        android:id="@+id/statisticsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/statistics_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/statisticsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticsHeader" />
     <TextView
         android:id="@+id/resultTv"
         android:layout_width="wrap_content"
